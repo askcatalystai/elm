@@ -1,0 +1,55 @@
+{
+  "model_type": "llama",
+  "base_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "finetuning_type": "LORA",
+  "lora_config": {
+    "r": 64,
+    "lora_alpha": 128,
+    "lora_dropout": 0.1,
+    "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj"]
+  },
+  "quantization": {
+    "quantization_method": "4bit",
+    "bnb_4bit_compute_dtype": "float16",
+    "bnb_4bit_quant_type": "nf4"
+  },
+  "task": "chat",
+  "special_tokens": {
+    "pad_token": "<|end_of_text|>",
+    "eos_token": "<|end_of_text|>",
+    "bos_token": "<|begin_of_text|>"
+  },
+  "generation_config": {
+    "max_new_tokens": 512,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "repetition_penalty": 1.1,
+    "do_sample": true
+  },
+  "training": {
+    "method": "LoRA + QLoRA",
+    "epochs": 3,
+    "learning_rate": 0.0002,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "context_length": 2048
+  },
+  "capabilities": [
+    "product_description_generation",
+    "conversational_commerce",
+    "product_categorization",
+    "tool_calling",
+    "customer_support",
+    "product_recommendations"
+  ],
+  "tools": [
+    "search_products",
+    "get_product_info",
+    "get_inventory",
+    "calculate_shipping",
+    "get_customer_orders",
+    "initiate_return",
+    "get_discount_eligibility",
+    "get_similar_products"
+  ]
+}

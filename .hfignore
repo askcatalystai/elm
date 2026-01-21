@@ -1,0 +1,63 @@
+# Hugging Face Hub Ignore File
+# These files will not be uploaded to the Hub
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Virtual environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Large data files
+data/raw/
+*.zip
+*.tar.gz
+*.bin (if large)
+
+# Logs
+logs/
+*.log
+
+# Checkpoints
+checkpoints/
+*.ckpt
+
+# TensorBoard
+runs/
+tensorboard_logs/
+
+# Other
+.wandb/
+tensorboard/
+.pytest_cache/
+.coverage

@@ -97,7 +97,7 @@ def generate_product_description_data(num_samples: int = 1000) -> List[Dict]:
         hook = random.choice(hooks)
         features_formatted = "✓ " + "\n✓ ".join(product["features"])
 
-        description = f"This {product['name'].lower()} delivers exceptional {product['category'].lower()} experience with cutting-edge features."
+        description = f"This {product['name'].lower()} delivers exceptional {category['category'].lower()} experience with cutting-edge features."
         benefits = f"Perfect for {audience} who value quality and performance. Backed by our satisfaction guarantee."
 
         call_to_action = "Order now and enjoy fast shipping and easy returns!"
